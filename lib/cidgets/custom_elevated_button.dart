@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class CustomElevatedButton extends StatelessWidget {
   const CustomElevatedButton(
@@ -11,11 +12,18 @@ class CustomElevatedButton extends StatelessWidget {
     return ElevatedButton(
         onPressed: onTap,
         style: ElevatedButton.styleFrom(
-          padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 40),
-          backgroundColor: const Color.fromARGB(2550, 33, 1, 95),
-          foregroundColor: Colors.white,
-          shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(40))
-        ),
-        child: Text(answerText));
+            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+            backgroundColor: const Color.fromARGB(255, 33, 1, 95),
+            foregroundColor: Colors.white,
+            shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(40))),
+        child: Text(
+          answerText,
+          textAlign: TextAlign.center,
+          style: GoogleFonts.lato(
+            color: Colors.white,
+            // fontSize: 16,
+          ),
+        ));
   }
 }
